@@ -1,0 +1,5 @@
+##PIP:
+
+- tensorflow
+- matplotlib
+- pillow
