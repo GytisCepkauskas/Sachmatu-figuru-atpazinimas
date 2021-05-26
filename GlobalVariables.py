@@ -1,14 +1,36 @@
+# !!! Neturėtų būti keičiami !!!
+IMG_HEIGHT, IMG_WIDTH = 256, 256
 
-BATCH_SIZE = 128
+# !!! Neturėtų būti keičiami, jei naudojamas „Chessman image dataset“ duomenų rinkinys !!!
+TRAINING_SET_SIZE, VALIDATION_SET_SIZE = 509, 42
 
-EPOCHS = 100
+# „Batch“ dydis
+BATCH_SIZE = 64
 
-IMG_HEIGHT = 256
+# Epizodų skaičius mokymui
+EPOCHS = 6000
 
-IMG_WIDTH = 256
+# Praretinimo tikimybė ChessNet ir OverfittingModel tinkluose
+DROPOUT_CHANCE = 0.30
 
-TRAINING_SET_SIZE = 400
+# Ar mokymo duomenų vaizdams yra pritaikoma augmentacija
+ENABLE_IMAGE_AUGMENTATION = True
 
-VALIDATION_SET_SIZE = 30
+# Palaikomi modeliai „paprastam“ mokymui: ChessNet, OverfittingModel, VGG19, MobileNetV2, ResNet50V2, ResNet101V2, InceptionV3, Xception
+# Palaikomi modeliai perkeltam mokymui: VGG19, MobileNetV2, ResNet50V2, ResNet101V2, InceptionV3, Xception
+MODEL_TO_USE = "ChessNet"
 
-DROPOUT_CHANCE = 0.275
+# Fiksuotas pasukimo kampas (laipsniais), kuriu pasukami visi testiniai vaizdai
+FIXED_ROTATION_DEGREE = 0
+
+# Fiksuotas pasukimo kampas (laipsniais), kuriu pasukami visi testiniai vaizdai
+FULL_ROTATION_ON = False
+
+# Failas tinklo, kuris bus naudojamas adaptacijoje
+MODEL_TO_FINE_TUNE_FILE = "Collected Models\\ChessNet.h5"
+
+# Failas tinklo, kuris bus naudojamas vertinime arba spėjimuose
+MODEL_TO_EVALUATE_FILE = "Collected Models\\ChessNet.h5"
+
+# Pasukimo metodo alfa reikšmė (laipsniais)
+ROTATION_RULE_ALPHA = 90

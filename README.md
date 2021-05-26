@@ -1,5 +1,7 @@
 ##PIP:
 
-- tensorflow
+- Tensorflow
+- Tensorflow-addons
+- Keras
 - matplotlib
 - pillow
